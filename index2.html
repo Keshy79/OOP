@@ -84,45 +84,18 @@
     <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
         <div class="carousel-inner">
             <div class="carousel-item active">
-                <img src="image/pexels-ottun-abdulmalik-14977889.jpg" class="d-block w-100 img" alt="...">
+                <img id="img1" src="image/pexels-ottun-abdulmalik-14977889.jpg" class="d-block w-100 img" alt="...">
             </div>
             <div class="carousel-item">
-                <img src="image/pexels-mcbarth™-obeya-3172830.jpg" class="d-block w-100 img" alt="...">
+                <img id="img2" src="image/pexels-mcbarth™-obeya-3172830.jpg" class="d-block w-100 img" alt="...">
             </div>
             <div class="carousel-item">
-                <img src="image/pexels-ottun-abdulmalik-14977889.jpg" class="d-block w-100 img" alt="...">
+                <img id="img3" src="image/pexels-ottun-abdulmalik-14977889.jpg" class="d-block w-100 img" alt="...">
             </div>
         </div>
     </div>
 
-    <div id="carouselExampleSlidesOnly2" class="carousel slide" data-bs-ride="carousel">
-        <div class="carousel-inner">
-            <div class="carousel-item active">
-                <img src="image/ben1.jpeg" class="d-block w-100 img" alt="...">
-            </div>
-            <div class="carousel-item">
-                <img src="image/ben3.jpeg" class="d-block w-100 img" alt="...">
-            </div>
-            <div class="carousel-item">
-                <img src="image/ben2.jpeg" class="d-block w-100 img" alt="...">
-            </div>
-        </div>
-    </div>
     <div id="result" class="naija mx-5">
-    <div id="result2" class="naija2 mx-5">
-    <div id="result3" class="naija3 mx-5">
-    <div id="result4" class="naija4 mx-5">
-    <div id="result5" class="naija5 mx-5">
-    <div id="result6" class="naija6 mx-5">
-    <div id="result7" class="naija7 mx-5">
-    <div id="result8" class="naija8 mx-5">
-    <div id="result9" class="naija9 mx-5">
-    <div id="result10" class="naija10 mx-5">
-    <div id="result11" class="naija11 mx-5">
-    <div id="result12" class="naija12 mx-5">
-    <div id="result13" class="naija13 mx-5">
-    <div id="resul14t" class="naija14 mx-5">
-    <div id="result15" class="naija15 mx-5">
     </div>
    
     <script>
@@ -130,6 +103,10 @@
         let Image = document.getElementById('Image')
         let result = document.getElementById('result')
         let result2 = document.getElementById('result2')
+
+        let nigeria={
+
+        }
 
 
         class country {
@@ -145,54 +122,54 @@
         }
 
         let ng = new country('<img src="image/download.png" alt="">', 'Nigeria', 'Nigeria is a multinational state inhabited by more than 250 ethnic groups speaking 500 distinct languages, all identifying with a wide variety of cultures.', 'capital: Abuja', 'Population: 213.4 million (2021) World Bank', 'Dialing code: +234', 'Currency: Nigerian Naira')
-        let bn = new country('<img src="image/benin.png" alt=" ">', 'Benin Republic', 'Benin, a French-speaking West African nation, is a birthplace of the vodun (or “voodoo”) religion and home to the former Dahomey Kingdom from circa 1600–1900.', 'Capital: Porto-Novo', 'Official language: French', 'Dialing code: +229')
+        // let bn = new country('<img src="image/benin.png" alt=" ">', 'Benin Republic', 'Benin, a French-speaking West African nation, is a birthplace of the vodun (or “voodoo”) religion and home to the former Dahomey Kingdom from circa 1600–1900.', 'Capital: Porto-Novo', 'Population: 13 million (2021) World Bank', 'Dialing code: +229', 'Currency: CEFA')
 
 
         const show = () => {
+            result.style.display = 'block'
+                carouselExampleSlidesOnly.style.display = "block"
+                sect.style.display = "none"
             if (allCountry.value == "Nigeria") {
-                result.innerHTML = `<img src="image/download.png" alt="" style="height: 150px; width: 300px;">`
-                result.innerHTML += `<p class="border-bottom border-black px-3 ">${ng.capital}</p>`
-                result.innerHTML += `<p style="text-align: justify;" class="border-bottom border-black px-3">${ng.countrySolgan}</p>`
-                result.innerHTML += `<p class="border-bottom border-black px-3 ">${ng.population}</p>`
-                result.innerHTML += `<p class="border-bottom border-black px-3 ">${ng.dialCode}</p>`
-                result.innerHTML += `<p class="border-bottom border-black px-3 ">${ng.Currency}</p>`
+                disp(ng)
+                caroselimg("image/ben pix.jpeg", "image/ben3.jpeg", "image/ben2.jpeg")
+            } else if (allCountry.value == "Benin") {
+                ng=new country('<img src="image/benin.png" alt=" ">', 'Benin Republic', 'Benin, a French-speaking West African nation, is a birthplace of the vodun (or “voodoo”) religion and home to the former Dahomey Kingdom from circa 1600–1900.', 'Capital: Porto-Novo', 'Population: 13 million (2021) World Bank', 'Dialing code: +229', 'Currency: CEFA')
+                disp(ng)
+                caroselimg("image/ben pix.jpeg", "image/ben3.jpeg", "image/ben2.jpeg")
+            }
+            else if(allCountry.value=="USA"){
+                ng=new country()
+                disp(ng)
+                caroselimg("image/ben pix.jpeg", "image/ben3.jpeg", "image/ben2.jpeg")
+
+            }
+
+
+        }
+        const caroselimg=(img1,img2,img3)=>{
+            document.getElementById('img1').setAttribute("src", img1)
+            document.getElementById('img2').setAttribute("src", img2)
+            document.getElementById('img3').setAttribute("src", img3)
+        }
+        const disp=(ctid)=>{
+            result.innerHTML = `${ng.Image}`
+                result.innerHTML += `<p class="border-bottom border-black px-3 ">${ctid.capital}</p>`
+                result.innerHTML += `<p style="text-align: justify;" class="border-bottom border-black px-3">${ctid.countrySolgan}</p>`
+                result.innerHTML += `<p class="border-bottom border-black px-3 ">${ctid.population}</p>`
+                result.innerHTML += `<p class="border-bottom border-black px-3 ">${ctid.dialCode}</p>`
+                result.innerHTML += `<p class="border-bottom border-black px-3 ">${ctid.Currency}</p>`
                 // result.innerHTML += `<p>${ng.capital}</p>`
 
                 result.innerHTML += `
                 <button class="text-white btn btn-dark" id="btn">back</button>
                 `
-                result.style.display = 'block'
-                carouselExampleSlidesOnly.style.display = "block"
-                sect.style.display = "none"
+               
                 document.getElementById("btn").addEventListener("click", () => {
                     result.style.display = 'none'
                     carouselExampleSlidesOnly.style.display = "none"
                     sect.style.display = "block"
                 })
-            } else if (allCountry.value == "Benin") {
-                result2.innerHTML = `<img src="image/benin.png" alt="" style="height: 150px; width: 300px;">`
-                result2.innerHTML += `<p class="border-bottom border-black px-3 ">${bn.capital}</p>`
-                result2.innerHTML += `<p style="text-align: justify;" class="border-bottom border-black px-3">${bn.countrySolgan}</p>`
-                result2.innerHTML += `<p class="border-bottom border-black px-3 ">${bn.population}</p>`
-                result2.innerHTML += `<p class="border-bottom border-black px-3 ">${bn.dialCode}</p>`
-                result2.innerHTML += `<p class="border-bottom border-black px-3 ">${bn.Currency}</p>`
-                // result.innerHTML += `<p>${ng.capital}</p>`
-
-                result2.innerHTML += `
-                <button class="text-white btn btn-dark" id="btn">back</button>
-                `
-                result2.style.display = 'block'
-                carouselExampleSlidesOnly2.style.display = "block"
-                sect.style.display = "none"
-                document.getElementById("btn").addEventListener("click", () => {
-                    result2.style.display = 'none'
-                    carouselExampleSlidesOnly2.style.display = "none"
-                    sect.style.display = "block"
-                })
-            }
-
         }
-
     </script>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
