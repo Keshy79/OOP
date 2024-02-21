@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link defer href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+</head>
+
+<body>
+    <div class="mx-auto shadow-lg">
+        <select id="select" class="form-select form-select-lg mb-3 w-25 shadow-sm shadow-lg "
+            aria-label="Large select example">
+            <option selected>Enter your country here</option>
+            <option value="1">Nigeria</option>
+            <option value="2">Benin</option>
+            <option value="3">Togo</option>
+            <option value="4">Ghana</option>
+            <option value="5">South Africa</option>
+            <option value="6">India</option>
+            <option value="7">China</option>
+            <!-- <option value="8">Amarica</option> -->
+            <option value="9">Canada</option>
+            <option value="10">South Korea</option>
+            <option value="11">Spain</option>
+            <option value="12">Poland</option>
+            <option value="13">Australia</option>
+            <option value="14">North Korea</option>
+            <option value="15">Cameroon</option>
+            <option value="16">Sudan</option>
+            <option value="17">Kenya</option>
+            <option value="18">Italy</option>
+            <option value="19">France</option>
+            <option value="20">United Kingdom</option>
+        </select>
+        <!-- <button onclick="show()">Show</button> -->
+
+    </div>
+    <button onclick="show()" class="btn btn-dark">Show</button>
+    <div id="ng"></div>
+</body>
+<script>
+    const show = () => {
+        if (select.value == '1') {
+            // alert("Nigeria")
+            ng.innerHTML = `
+            <div id="card" class="card" style="width: 18rem;">
+             <img src="image/download.png" class="card-img-top" alt="...">
+        <div class="card-body">
+            <h5 class="card-title">Card title</h5>
+            <p class="card-text">Nigeria, an African country on the Gulf of Guinea, has many natural landmarks and
+                wildlife reserves. Protected areas such as Cross River National Park and Yankari National Park have waterfalls, dense rainforest, savanna and rare primate habitats. One of the most recognizable sites is Zuma Rock, a 725m-tall monolith outside the capital of Abuja that’s pictured on the national currency.
+            </p>
+        </div>
+        <ul class="list-group list-group-flush">
+            <li class="list-group-item">capital: Abuja</li>
+            <li class="list-group-item">Currency: Nigerian Naira</li>
+            <li class="list-group-item">Population: 213.4 million (2021) World Bank</li>
+            <li class="list-group-item">Official language: English</li>
+            <li class="list-group-item">Dialing code: +234</li>
+            <li class="list-group-item">Gross domestic product: 440.8 billion USD (2021) World Bank</li>
+        </ul>
+    </div>
+            `
+        } else if (select.value == '2') {
+            ng.innerHTML = `
+            <div id="card" class="card" style="width: 18rem;">
+            <img src="benin.png" class="card-img-top" alt="...">
+        <div class="card-body">
+            <h5 class="card-title">Benin</h5>
+           <p>Benin, a French-speaking West African nation, is a birthplace of the vodun (or “voodoo”) religion and home to the former Dahomey Kingdom from circa 1600–1900. In Abomey, Dahomey's former capital, the Historical Museum occupies two royal palaces with bas-reliefs recounting the kingdom’s past and a throne mounted on human skulls. To the north, Pendjari National Park offers safaris with elephants, hippos and lions</p>
+        </div>
+        <ul class="list-group list-group-flush">
+          <li class="list-group-item">Capital: Porto-Novo</li>
+          <li class="list-group-item">Currency: West African CFA franc</li>
+          <li class="list-group-item">Population: 13 million (2021) World Bank</li>
+          <li class="list-group-item">Official language: French</li>
+          <li class="list-group-item">Dialing code: +229</li>
+          <li class="list-group-item">President: Patrice Talon</li>
+        </ul>
+    </div>
+            `
+        } else if (select.value == '3') {
+            ng.innerHTML = `
+            <div id="card" class="card" style="width: 18rem;">
+            <img src="togo.png" class="card-img-top" alt="...">
+        <div class="card-body">
+            <h5 class="card-title">Togo</h5>
+            <p>Togo, a West African nation on the Gulf of Guinea, is known for its palm-lined beaches and hilltop villages. Koutammakou, inhabited by the Batammariba people, is a traditional settlement of fortresslike clay huts dating to the 17th century. In the capital, Lomé, are the multistory Grand Marché bazaar and the Fetish Market, offering traditional talismans and remedies relating to the vodun (voodoo) religion.</p>
+        </div>
+        <ul class="list-group list-group-flush">
+          <li class="list-group-item">Capital: Lomé</li>
+          <li class="list-group-item">Currency: West African CFA franc</li>
+          <li class="list-group-item">Population: 8.645 million (2021) World Bank</li>
+          <li class="list-group-item">Official language: French</li>
+          <li class="list-group-item">Dialing code: +229</li>
+          <li class="list-group-item">President: Faure Gnassingbé</li>
+        </ul>
+    </div>
+            `
+        } else if (select.value == '4') {
+            ng.innerHTML = `
+            <div id="card" class="card" style="width: 18rem;">
+                <img src="ghana flag.png" class="card-img-top" alt="...">
+        <div class="card-body">
+            <h5 class="card-title">Ghana</h5>
+            <p>Ghana, officially the Republic of Ghana, is a country in West Africa. It abuts the Gulf of Guinea and the Atlantic Ocean to the south, sharing borders with Ivory Coast in the west, Burkina Faso in the north, and Togo in the east.</p>
+        </div>
+        <ul class="list-group list-group-flush">
+            <li class="list-group-item">Capital: Accra</li>
+            <li class="list-group-item">Currency: Ghanaian Cedi</li>
+            <li class="list-group-item">Population: 32.83 million (2021) World Bank</li>
+            <li class="list-group-item">Official language: English</li>
+            <li class="list-group-item">Dialing code: +233</li>
+            <li class="list-group-item">President: Nana Akufo-Addo</li>
+        </ul>
+    </div>
+            `
+        } else if (select.value == '5') {
+            ng.innerHTML = `
+            <div id="card" class="card" style="width: 18rem;">
+                <img src="South Africa.png" class="card-img-top" alt="...">
+        <div class="card-body">
+            <h5 class="card-title">South Africa</h5>
+            <p>South Africa is a country on the southernmost tip of the African continent, marked by several distinct ecosystems. Inland safari destination Kruger National Park is populated by big game. The Western Cape offers beaches, lush winelands around Stellenbosch and Paarl, craggy cliffs at the Cape of Good Hope, forest and lagoons along the Garden Route, and the city of Cape Town, beneath flat-topped Table Mountain.</p>
+        </div>
+        <ul class="list-group list-group-flush">
+            <li class="list-group-item">Capital: Cape Town, Pretoria, Bloemfontein</li>
+            <li class="list-group-item">Population: 59.39 million (2021) World Bank</li>
+            <li class="list-group-item">Official language: Afrikaans, English, Xhosa, Zulu, Southern Sotho, Northern Sotho, Tswana, Tsonga, Venda, Swati, Ndebele</li>
+            <li class="list-group-item">Dialing code: +27</li>
+            <li class="list-group-item">President: Cyril Ramaphosa</li>
+        </ul>
+    </div>
+            `
+        } else if (select.value == '6') {
+            ng.innerHTML = `
+            <div id="card" class="card" style="width: 18rem;">
+                <img src="india.png" class="card-img-top" alt="...">
+        <div class="card-body">
+            <h5 class="card-title">India</h5>
+           <p>India, officially the Republic of India, is a country in South Asia. It is the seventh-largest country by area; the most populous country as of June 2023; and from the time of its independence in 1947, the world's most populous democracy.</p>
+        </div>
+        <ul class="list-group list-group-flush">
+            <li class="list-group-item">Capital: New Delhi</li>
+            <li class="list-group-item">Government: Federal parliamentary republic</li>
+            <li class="list-group-item">HDI (2021): 0.633; medium · 132nd</li>
+            <li class="list-group-item">Dialing code: +27</li>
+            <li class="list-group-item">Largest city: Mumbai (city proper); Delhi (metropolitan area)</li>
+        </ul>
+    </div>
+            `
+        } else if (select.value == '7') {
+            ng.innerHTML = `
+            <div id="card" class="card" style="width: 18rem;">
+                <img src="china.jpeg" class="card-img-top" alt="...">
+        <div class="card-body">
+            <h5 class="card-title">Chian</h5>
+        <p>China, officially the People's Republic of China, is a country in East Asia. With a population exceeding 1.4 billion, it is the world's second-most-populous country. China spans the equivalent of five time zones and borders fourteen countries by land.</p>
+        </div>
+        <ul class="list-group list-group-flush">
+            <li class="list-group-item">Capital: Beijing</li>
+            <li class="list-group-item">President: Xi Jinping</li>
+            <li class="list-group-item">Population: 1.412 billion (2021) World Bankd</li>
+            <li class="list-group-item">Official language: Mandarin</li>
+        </ul>
+    </div>
+            `
+        } else if (select.value == '9') {
+            ng.innerHTML = `
+            <div id="card" class="card" style="width: 18rem;">
+                <img src="Canada.png" class="card-img-top" alt="...">
+        <div class="card-body">
+            <h5 class="card-title">Canada</h5>
+         <p>Canada is a country in North America. Its ten provinces and three territories extend from the Atlantic Ocean to the Pacific Ocean and northward into the Arctic Ocean, making it the world's second-largest country by total area, with the world's longest coastline.</p>
+        </div>
+        <ul class="list-group list-group-flush">
+            <li class="list-group-item">Capital: Ottawa</li>
+            <li class="list-group-item">President: Xi Jinping</li>
+            <li class="list-group-item">Dialing code: +1</li>
+            <li class="list-group-item">Population: 38.25 million (2021) World Bank</li>
+            <li class="list-group-item">Official language: Mandarin</li>
+        </ul>
+    </div>
+            `
+        }  else if (select.value == '10') {
+            ng.innerHTML = `
+            <div id="card" class="card" style="width: 18rem;">
+                <img src="skorea.jpeg" class="card-img-top" alt="...">
+        <div class="card-body">
+            <h5 class="card-title">South Korea</h5>
+        <p>South Korea, an East Asian nation on the southern half of the Korean Peninsula, shares one of the world’s most heavily militarized borders with North Korea. It’s equally known for its green, hilly countryside dotted with cherry trees and centuries-old Buddhist temples, plus its coastal fishing villages, sub-tropical islands and high-tech cities such as Seoul, the capital.</p>
+        </div>
+        <ul class="list-group list-group-flush">
+            <li class="list-group-item">Capital: Seoul</li>
+            <li class="list-group-item">Currency: South Korean won</li>
+            <li class="list-group-item">Dialing code: +82</li>
+            <li class="list-group-item">Population: 51.74 million (2021) World Bank</li>
+            <li class="list-group-item">Official languages: Korean, Korean Sign Language</li>
+        </ul>
+    </div>
+            `
+    }
+}
+</script>
+
+</html>

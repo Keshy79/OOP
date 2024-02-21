@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+</head>
+<style>
+    body {
+        overflow: hidden;
+    }
+
+    .show {
+        padding-top: 20%;
+        /* position: relative; */
+    }
+
+    .sect {
+        background-image: url(image/pexels-magda-ehlers-2660262.jpg);
+        background-size: cover;
+        height: 100vh;
+        position: relative;
+    }
+
+    .naija {
+        position: absolute;
+        /* background-image: url(); */
+        width: 100%;
+        height: 100%;
+        top: 0px;
+        display: none;
+    }
+
+    #carouselExampleSlidesOnly {
+        position: absolute !important;
+        height: 100vh;
+        width: 100%;
+        display: none;
+    }
+
+    #result {
+        background-color: rgba(255, 255, 255, 0.8);
+        border-radius: 5px;
+        color: #333;
+        font-family: system-ui, sans-serif;
+        /* line-height: 1.5; */
+        max-width: 100%;
+        /* padding: 1rem 2rem; */
+        transform: translateY(0px);
+        width: 300px;
+        height: 520px;
+        transform: translate(420px, 50px);
+    }
+
+    @supports (-webkit-backdrop-filter: none) or (backdrop-filter: none) {
+        #result {
+            -webkit-backdrop-filter: blur(10px);
+            backdrop-filter: blur(10px);
+            background-color: rgba(255, 255, 255, 0.5);
+        }
+
+        .img {
+            height: 100vh !important;
+            width: 100% !important;
+            background-color: rgba(0, 0, 0, 0.491) !important;
+        }
+    }
+    #btn{
+        margin-left: 120px;
+    }
+</style>
+
+<body>
+    <section class="sect" id="sect">
+        <div class="text-center show">
+            <input type="text" id="showy">
+            <button onclick="show()" class="btn btn-dark">Show</button>
+        </div>
+    </section>
+    <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img src="image/pexels-ottun-abdulmalik-14977889.jpg" class="d-block w-100 img" alt="...">
+            </div>
+            <div class="carousel-item">
+                <img src="image/pexels-mcbarth™-obeya-3172830.jpg" class="d-block w-100 img" alt="...">
+            </div>
+            <div class="carousel-item">
+                <img src="image/pexels-ottun-abdulmalik-14977889.jpg" class="d-block w-100 img" alt="...">
+            </div>
+        </div>
+    </div>
+
+    <div id="carouselExampleSlidesOnly2" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img src="image/pexels-" class="d-block w-100 img" alt="...">
+            </div>
+            <div class="carousel-item">
+                <img src="image/pexels-mcbarth™-obeya-3172830.jpg" class="d-block w-100 img" alt="...">
+            </div>
+            <div class="carousel-item">
+                <img src="image/pexels-ottun-abdulmalik-14977889.jpg" class="d-block w-100 img" alt="...">
+            </div>
+        </div>
+    </div>
+    <div id="result" class="naija mx-5">
+    <div id="result2" class="naija2 mx-5">
+    <div id="result3" class="naija3 mx-5">
+    <div id="result4" class="naija4 mx-5">
+    <div id="result5" class="naija5 mx-5">
+    <div id="result6" class="naija6 mx-5">
+    <div id="result7" class="naija7 mx-5">
+    <div id="result8" class="naija8 mx-5">
+    <div id="result9" class="naija9 mx-5">
+    <div id="result10" class="naija10 mx-5">
+    <div id="result11" class="naija11 mx-5">
+    <div id="result12" class="naija12 mx-5">
+    <div id="result13" class="naija13 mx-5">
+    <div id="resul14t" class="naija14 mx-5">
+    <div id="result15" class="naija15 mx-5">
+    </div>
+   
+    <script>
+        let allCountry = document.getElementById('showy')
+        let Image = document.getElementById('Image')
+
+        class country {
+            constructor(Image, countryName, countrySolgan, capital, population, dialCode, Currency) {
+                this.Image = Image
+                this.countryName = countryName,
+                    this.countrySolgan = countrySolgan,
+                    this.capital = capital,
+                    this.population = population,
+                    this.dialCode = dialCode,
+                    this.Currency = Currency
+            }
+        }
+
+        let ng = new country('<img src="image/download.png" alt="">', 'Nigeria', 'Nigeria is a multinational state inhabited by more than 250 ethnic groups speaking 500 distinct languages, all identifying with a wide variety of cultures.', 'capital: Abuja', 'Population: 213.4 million (2021) World Bank', 'Dialing code: +234', 'Currency: Nigerian Naira')
+        let bn = new country('Benin Republic', 'Dialing code: +229')
+
+
+        const show = () => {
+            if (allCountry.value == "Nigeria") {
+                result.innerHTML = `<img src="image/download.png" alt="" style="height: 150px; width: 300px;">`
+                result.innerHTML += `<p class="border-bottom border-black px-3 ">${ng.capital}</p>`
+                result.innerHTML += `<p style="text-align: justify;" class="border-bottom border-black px-3">${ng.countrySolgan}</p>`
+                result.innerHTML += `<p class="border-bottom border-black px-3 ">${ng.population}</p>`
+                result.innerHTML += `<p class="border-bottom border-black px-3 ">${ng.dialCode}</p>`
+                result.innerHTML += `<p class="border-bottom border-black px-3 ">${ng.Currency}</p>`
+                // result.innerHTML += `<p>${ng.capital}</p>`
+
+                result.innerHTML += `
+                <button class="text-white btn btn-dark" id="btn">back</button>
+                `
+                result.style.display = 'block'
+                carouselExampleSlidesOnly.style.display = "block"
+                sect.style.display = "none"
+                document.getElementById("btn").addEventListener("click", () => {
+                    result.style.display = 'none'
+                    carouselExampleSlidesOnly.style.display = "none"
+                    sect.style.display = "block"
+                })
+            } else if (allCountry.value == "Benin") {
+                result.innerHTML = `<img src="image/benin.png" alt="" style="height: 60px;">`
+                result.innerHTML += `<p>${bn.capital}</p>`
+                result.innerHTML += `<p class="solgan">${bn.countrySolgan}</p>`
+                result.innerHTML += `<p>${bn.capital}</p>`
+                result.innerHTML += `<p>${bn.population}</p>`
+                result.innerHTML += `<p>${bn.dialCode}</p>`
+                result.innerHTML += `<p>${bn.Currency}</p>`
+                result.innerHTML += `
+                <button class="text-white btn" id="btn">back</button>
+                `
+                result.style.display = 'block'
+                carouselExampleSlidesOnly2.style.display = "block"
+                sect.style.display = "none"
+                document.getElementById("btn").addEventListener("click", () => {
+                    result.style.display = 'none'
+                    carouselExampleSlidesOnly.style.display = "none"
+                    sect.style.display = "block"
+                })
+            }
+
+        }
+
+    </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
