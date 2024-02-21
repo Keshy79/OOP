@@ -24,6 +24,7 @@
         height: 100vh;
         position: relative;
     }
+    
 
     .naija {
         position: absolute;
@@ -116,6 +117,13 @@
             <button onclick="show()" class="btn btn-dark">Show</button>
         </div>
     </section>
+
+    <section class="sect2" id="sect">
+        <div class="text-center show2">
+            <input type="text" id="showy">
+            <button onclick="show()" class="btn btn-dark">Show</button>
+        </div>
+    </section>
     <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
         <div class="carousel-inner">
             <div class="carousel-item active">
@@ -163,6 +171,9 @@
     <script>
         let allCountry = document.getElementById('showy')
         let Image = document.getElementById('Image')
+        let result = document.getElementById('result')
+        let result2 = document.getElementById('result2')
+
 
         class country {
             constructor(Image, countryName, countrySolgan, capital, population, dialCode, Currency) {
