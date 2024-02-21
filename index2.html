@@ -97,7 +97,7 @@
 
     <div id="result" class="naija mx-5">
     </div>
-   
+    <img src="image/download.png" alt="" style="width: 300px; height: ;">
     <script>
         let allCountry = document.getElementById('showy')
         let Image = document.getElementById('Image')
@@ -121,7 +121,7 @@
             }
         }
 
-        let ng = new country('<img src="image/download.png" alt="">', 'Nigeria', 'Nigeria is a multinational state inhabited by more than 250 ethnic groups speaking 500 distinct languages, all identifying with a wide variety of cultures.', 'capital: Abuja', 'Population: 213.4 million (2021) World Bank', 'Dialing code: +234', 'Currency: Nigerian Naira')
+        let ng = new country('<img src="image/download.png" alt="" style="width: 300px; height: 150px;">', 'Nigeria', 'Nigeria is a multinational state inhabited by more than 250 ethnic groups speaking 500 distinct languages, all identifying with a wide variety of cultures.', 'capital: Abuja', 'Population: 213.4 million (2021) World Bank', 'Dialing code: +234', 'Currency: Nigerian Naira')
         // let bn = new country('<img src="image/benin.png" alt=" ">', 'Benin Republic', 'Benin, a French-speaking West African nation, is a birthplace of the vodun (or “voodoo”) religion and home to the former Dahomey Kingdom from circa 1600–1900.', 'Capital: Porto-Novo', 'Population: 13 million (2021) World Bank', 'Dialing code: +229', 'Currency: CEFA')
 
 
@@ -131,9 +131,9 @@
                 sect.style.display = "none"
             if (allCountry.value == "Nigeria") {
                 disp(ng)
-                caroselimg("image/ben pix.jpeg", "image/ben3.jpeg", "image/ben2.jpeg")
+                caroselimg("image/pexels-ottun-abdulmalik-14977889.jpg", "image/pexels-mcbarth™-obeya-3172830.jpg", "image/pexels-ottun-abdulmalik-14977889.jpg")
             } else if (allCountry.value == "Benin") {
-                ng=new country('<img src="image/benin.png" alt=" ">', 'Benin Republic', 'Benin, a French-speaking West African nation, is a birthplace of the vodun (or “voodoo”) religion and home to the former Dahomey Kingdom from circa 1600–1900.', 'Capital: Porto-Novo', 'Population: 13 million (2021) World Bank', 'Dialing code: +229', 'Currency: CEFA')
+                ng=new country('<img src="image/benin.png" alt=" " style="width: 300px; height: 150px;">', 'Benin Republic', 'Benin, a French-speaking West African nation, is a birthplace of the vodun (or “voodoo”) religion and home to the former Dahomey Kingdom from circa 1600–1900.', 'Capital: Porto-Novo', 'Population: 13 million (2021) World Bank', 'Dialing code: +229', 'Currency: CEFA')
                 disp(ng)
                 caroselimg("image/ben pix.jpeg", "image/ben3.jpeg", "image/ben2.jpeg")
             }
