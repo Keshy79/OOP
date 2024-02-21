@@ -141,7 +141,7 @@
         }
 
         let ng = new country('<img src="image/download.png" alt="">', 'Nigeria', 'Nigeria is a multinational state inhabited by more than 250 ethnic groups speaking 500 distinct languages, all identifying with a wide variety of cultures.', 'capital: Abuja', 'Population: 213.4 million (2021) World Bank', 'Dialing code: +234', 'Currency: Nigerian Naira')
-        let bn = new country('Benin Republic', 'Dialing code: +229')
+        let bn = new country('<img src="image/benin.png" alt=" ">', 'Benin Republic', 'Dialing code: +229')
 
 
         const show = () => {
@@ -166,7 +166,7 @@
                     sect.style.display = "block"
                 })
             } else if (allCountry.value == "Benin") {
-                result.innerHTML = `<img src="image/benin.png" alt="" style="height: 60px;">`
+                result.innerHTML = `<img src="image/benin.png" alt=" ">`
                 result.innerHTML += `<p>${bn.capital}</p>`
                 result.innerHTML += `<p class="solgan">${bn.countrySolgan}</p>`
                 result.innerHTML += `<p>${bn.capital}</p>`
