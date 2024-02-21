@@ -49,6 +49,13 @@
         display: none;
     }
 
+    #carouselExampleSlidesOnly2 {
+        position: absolute !important;
+        height: 100vh;
+        width: 100%;
+        display: none;
+    }
+
     #result {
         background-color: rgba(255, 255, 255, 0.8);
         border-radius: 5px;
@@ -196,22 +203,23 @@
                     sect.style.display = "block"
                 })
             } else if (allCountry.value == "Benin") {
-                result2.innerHTML = `<img src="image/benin.png" alt=" ">`
-                result2.innerHTML += `<p>${bn.capital}</p>`
-                result2.innerHTML += `<p class="solgan">${bn.countrySolgan}</p>`
-                result2.innerHTML += `<p>${bn.capital}</p>`
-                result2.innerHTML += `<p>${bn.population}</p>`
-                result2.innerHTML += `<p>${bn.dialCode}</p>`
-                result2.innerHTML += `<p>${bn.Currency}</p>`
+                result2.innerHTML = `<img src="image/download.png" alt="" style="height: 150px; width: 300px;">`
+                result2.innerHTML += `<p class="border-bottom border-black px-3 ">${ng.capital}</p>`
+                result2.innerHTML += `<p style="text-align: justify;" class="border-bottom border-black px-3">${ng.countrySolgan}</p>`
+                result2.innerHTML += `<p class="border-bottom border-black px-3 ">${ng.population}</p>`
+                result2.innerHTML += `<p class="border-bottom border-black px-3 ">${ng.dialCode}</p>`
+                result2.innerHTML += `<p class="border-bottom border-black px-3 ">${ng.Currency}</p>`
+                // result.innerHTML += `<p>${ng.capital}</p>`
+
                 result2.innerHTML += `
-                <button class="text-white btn" id="btn">back</button>
+                <button class="text-white btn btn-dark" id="btn">back</button>
                 `
                 result2.style.display = 'block'
                 carouselExampleSlidesOnly2.style.display = "block"
                 sect.style.display = "none"
                 document.getElementById("btn").addEventListener("click", () => {
                     result2.style.display = 'none'
-                    carouselExampleSlidesOnly.style.display = "none"
+                    carouselExampleSlidesOnly2.style.display = "none"
                     sect.style.display = "block"
                 })
             }
